@@ -7,7 +7,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Text onPress={doIt}>Hello world</Text>
+      <Weather zipCode="90110"/>
       <StatusBar style="auto" />
     </View>
   );
