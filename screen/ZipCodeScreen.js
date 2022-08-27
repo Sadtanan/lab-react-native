@@ -9,10 +9,12 @@ const availableZipItems = [
     { place: 'Chonburi', code: '20000' },
 ]
 const ZipItem = ({place, code, navigation}) => (
-    <View style={styles.zipItem}>
-        <Text>{place}</Text>
-        <Text>{code}</Text>
-    </View>
+    <TouchableHighlight onPress={() => navigation.navigate('Weather', { zipCode: code})}>
+        <View>
+            <Text>{place}</Text>
+            <Text >{code}</Text>
+        </View>
+    </TouchableHighlight>
 )
 const _keyExtractor = item => item.code
 
